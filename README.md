@@ -17,15 +17,15 @@ https://github.com/christiankissig/ocaml99/wiki#problems-for-lists
    def p1_index [A](ls: IndexedSeq[A]): A = ls(ls.length-1) // use index based access 
    ```
    
-    ```scala
-   import scala.annotation.tailrec   
-   @tailrec
-   def p1_recursive[A](ls: List[A]): A = ls match {
-       case h :: Nil  => h
-       case _ :: tail => p1_recursive(tail)
-       case Nil         => throw new NoSuchElementException //only for empty lists
+```scala
+  import scala.annotation.tailrec   
+  @tailrec
+  def p1_recursive[A](ls: List[A]): A = ls match {
+    case h :: Nil  => h
+    case _ :: tail => p1_recursive(tail)
+    case Nil         => throw new NoSuchElementException //only for empty lists
    }   
-   ```
+```
 
 2. Find the last but one element of a list.
 
