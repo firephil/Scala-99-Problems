@@ -8,6 +8,9 @@ import scala.annotation.tailrec
 
 def p1 [A](ls: List[A]): A = ls.last
 
+def p1_index [A](ls: IndexedSeq[A]): A = ls(ls.length-1)
+
+
 
 /* Imperative solution taken from scala List implementation
 * https://github.com/scala/scala/blob/2.13.x/src/library/scala/collection/immutable/List.scala
