@@ -21,9 +21,9 @@ https://github.com/christiankissig/ocaml99/wiki#problems-for-lists
    import scala.annotation.tailrec   
    @tailrec
    def p1_recursive[A](ls: List[A]): A = ls match {
-   case h :: Nil  => h
-   case _ :: tail => p1_recursive(tail)
-   case Nil         => throw new NoSuchElementException //only for empty lists
+       case h :: Nil  => h
+       case _ :: tail => p1_recursive(tail)
+       case Nil         => throw new NoSuchElementException //only for empty lists
    }   
    ```
 
