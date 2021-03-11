@@ -16,6 +16,15 @@ https://github.com/christiankissig/ocaml99/wiki#problems-for-lists
    ```scala
    def p1_index [A](ls: IndexedSeq[A]): A = ls(ls.length-1) // use index based access 
    ```
+   ```scala
+   
+   def p1_recersive[A](ls: List[A]): A = ls match {
+   case h :: Nil  => h
+   case _ :: tail => p1_recersive(tail)
+   case Nil         => throw new NoSuchElementException //only for empty lists
+   }   
+    ```
+
 
 2. Find the last but one element of a list.
 
