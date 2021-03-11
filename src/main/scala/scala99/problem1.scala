@@ -31,7 +31,7 @@ def p1_imperative[A](ls: List[A]): A= {
 
 // The standard functional approach is to recurse down the list until we hit
 // the end.  Scala's pattern matching makes this easy.
-@tailrec
+
 def p1_recursive[A](ls: List[A]): A = ls match {
   case h :: Nil  => h
   case _ :: tail => p1_recursive(tail)
