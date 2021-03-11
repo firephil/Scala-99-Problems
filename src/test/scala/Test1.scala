@@ -13,5 +13,6 @@ class Test1 {
     assertEquals(100,p1((1 to 100).toList))
     assertEquals(100,p1_imperative((1 to 100).toList))
     assertEquals(100,p1_recersive((1 to 100).toList))
+    assertEquals(100,p1_index((1 to 100).toIndexedSeq))
   }
 }

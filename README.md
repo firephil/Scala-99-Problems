@@ -10,6 +10,12 @@ https://github.com/christiankissig/ocaml99/wiki#problems-for-lists
 ## Problems for Lists
 
 1. Find the last element of a list.
+   ```scala
+   def p1 [A](ls: List[A]): A = ls.last  // use the build in List  
+   ```
+   ```scala
+   def p1_index [A](ls: IndexedSeq[A]): A = ls(ls.length-1) // use index based access 
+   ```
 
 2. Find the last but one element of a list.
 

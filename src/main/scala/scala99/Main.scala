@@ -8,7 +8,9 @@ def run1() =
   Timer.average(p1(ls))(5)
   Timer.average(p1_imperative(ls))(5)
   Timer.average(p1_recersive(ls))(5)
-  Timer.average(p1_index(xs))(5)
+  
+  // using an indexed collection is the fastest  O(1) vs O(n)
+  Timer.average(p1_index(xs))(5)  
 
 @main
 def run2() = ???
