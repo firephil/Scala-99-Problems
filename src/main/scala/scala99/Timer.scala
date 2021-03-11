@@ -1,4 +1,6 @@
-object Timer extends App{
+package scala99
+
+object Timer {
 
 
   def timePrint[R](f: => R): Unit = {
@@ -11,7 +13,7 @@ object Timer extends App{
     val r = f
     val t1 = System.nanoTime()
 
-    val time = (t1-t0) /1000
+    val time = (t1 - t0) / 1000
 
     time
   }
@@ -21,40 +23,33 @@ object Timer extends App{
     val r = f
     val t1 = System.nanoTime()
 
-    val nanos = (t1-t0)
+    val nanos = (t1 - t0)
 
-    val ms = nanos /1000000d
+    val ms = nanos / 1000000d
 
-    val st = ms.toString.slice(0,5)
+    val st = ms.toString.slice(0, 5)
 
-    val result = s"time taken $st ms \nThe result is: $r"
+    val result = s"time taken $st ms , The result is: $r"
 
     result
   }
 
-  def time2file[R](f: => R)(path : String) : Unit = {
+  def time2file[R](f: => R)(path: String): Unit = {
 
     FileWriter.write(timeString(f), path)
   }
 
 
-  def average[R](times:Int = 10)(f: => R) : Unit = {
-
+  def average[R](f: => R)(times: Int = 10): Unit = {
 
     var result = 0L
-    var n = times
-    
-    // use for with range
-    while(n > 0)
-    {
 
+    // use for with range
+    for (a <- 1 to times)
       result = result + time(f)
-      n = n-1
-    }
 
     //average time taken
-    val average = result/(times*1000d)
+    val average = result / (times * 1000d)
     println(s"time taken: $average ms ")
-
   }
 }
