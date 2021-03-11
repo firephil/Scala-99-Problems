@@ -18,7 +18,7 @@ https://github.com/christiankissig/ocaml99/wiki#problems-for-lists
    ```
    ```scala
    
-   def p1_recersive[A](ls: List[A]): A = ls match {
+   def p1_recursive[A](ls: List[A]): A = ls match {
    case h :: Nil  => h
    case _ :: tail => p1_recersive(tail)
    case Nil         => throw new NoSuchElementException //only for empty lists
