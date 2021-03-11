@@ -9,7 +9,7 @@ https://wiki.haskell.org/H-99:_Ninety-Nine_Haskell_Problems
 https://github.com/christiankissig/ocaml99/wiki#problems-for-lists
 ## Problems for Lists
 
-1. Find the last element of a list.
+**1. Find the last element of a list.**
    ```scala
    def p1 [A](ls: List[A]): A = ls.last  // use the build in List  
    ```
