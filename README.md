@@ -10,7 +10,7 @@ https://github.com/christiankissig/ocaml99/wiki#problems-for-lists
 ## Problems for Lists
 
 **1. Find the last element of a list.**
-   ```scala
+   ```scala 
    def p1 [A](ls: List[A]): A = ls.last  // use the build in List  
    ```
    ```scala
