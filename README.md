@@ -1,3 +1,5 @@
+[![Scala CI](https://github.com/firephil/Scala-99-Problems/actions/workflows/scala.yml/badge.svg)](https://github.com/firephil/Scala-99-Problems/actions/workflows/scala.yml)
+
 # 99 Problems in Scala
 
 ### (using scala 3)
